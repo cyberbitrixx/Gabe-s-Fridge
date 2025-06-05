@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		04C205AA2DF1281A00B6E96A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205A92DF1281A00B6E96A /* AppDelegate.m */; };
 		04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AC2DF1281A00B6E96A /* SceneDelegate.m */; };
-		04C205B02DF1281A00B6E96A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AF2DF1281A00B6E96A /* ViewController.m */; };
+		04C205B02DF1281A00B6E96A /* GroceriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */; };
 		04C205B32DF1281A00B6E96A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04C205B22DF1281A00B6E96A /* Base */; };
 		04C205B62DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04C205B42DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld */; };
 		04C205B82DF1281E00B6E96A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C205B72DF1281E00B6E96A /* Assets.xcassets */; };
 		04C205BB2DF1281E00B6E96A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 04C205BA2DF1281E00B6E96A /* Base */; };
 		04C205BE2DF1281E00B6E96A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205BD2DF1281E00B6E96A /* main.m */; };
+		04C205CF2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205CD2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m */; };
+		04C205D02DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205CE2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +25,18 @@
 		04C205A92DF1281A00B6E96A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04C205AB2DF1281A00B6E96A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		04C205AC2DF1281A00B6E96A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		04C205AE2DF1281A00B6E96A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04C205AF2DF1281A00B6E96A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04C205AE2DF1281A00B6E96A /* GroceriesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceriesListViewController.h; sourceTree = "<group>"; };
+		04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceriesListViewController.m; sourceTree = "<group>"; };
 		04C205B22DF1281A00B6E96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04C205B52DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gabe_s_Fridge.xcdatamodel; sourceTree = "<group>"; };
 		04C205B72DF1281E00B6E96A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C205BA2DF1281E00B6E96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C205BC2DF1281E00B6E96A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C205BD2DF1281E00B6E96A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C205CB2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04C205CC2DF12C2100B6E96A /* GroceryItem+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		04C205CD2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GroceryItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		04C205CE2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GroceryItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,10 @@
 		04C2059C2DF1281900B6E96A = {
 			isa = PBXGroup;
 			children = (
+				04C205CB2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.h */,
+				04C205CC2DF12C2100B6E96A /* GroceryItem+CoreDataClass.h */,
+				04C205CD2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m */,
+				04C205CE2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m */,
 				04C205A72DF1281A00B6E96A /* Gabe's-Fridge */,
 				04C205A62DF1281A00B6E96A /* Products */,
 			);
@@ -63,20 +73,68 @@
 		04C205A72DF1281A00B6E96A /* Gabe's-Fridge */ = {
 			isa = PBXGroup;
 			children = (
+				04C205C92DF1288D00B6E96A /* Models */,
+				04C205C82DF1288700B6E96A /* Views */,
+				04C205C72DF1286C00B6E96A /* ViewControllers */,
+				04C205C62DF1285B00B6E96A /* CoreData */,
+				04C205C42DF1283700B6E96A /* Core */,
+				04C205CA2DF1289500B6E96A /* Resources */,
+			);
+			path = "Gabe's-Fridge";
+			sourceTree = "<group>";
+		};
+		04C205C42DF1283700B6E96A /* Core */ = {
+			isa = PBXGroup;
+			children = (
 				04C205A82DF1281A00B6E96A /* AppDelegate.h */,
 				04C205A92DF1281A00B6E96A /* AppDelegate.m */,
 				04C205AB2DF1281A00B6E96A /* SceneDelegate.h */,
 				04C205AC2DF1281A00B6E96A /* SceneDelegate.m */,
-				04C205AE2DF1281A00B6E96A /* ViewController.h */,
-				04C205AF2DF1281A00B6E96A /* ViewController.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		04C205C62DF1285B00B6E96A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04C205B42DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04C205C72DF1286C00B6E96A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04C205AE2DF1281A00B6E96A /* GroceriesListViewController.h */,
+				04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04C205C82DF1288700B6E96A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04C205C92DF1288D00B6E96A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04C205CA2DF1289500B6E96A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				04C205B12DF1281A00B6E96A /* Main.storyboard */,
 				04C205B72DF1281E00B6E96A /* Assets.xcassets */,
 				04C205B92DF1281E00B6E96A /* LaunchScreen.storyboard */,
 				04C205BC2DF1281E00B6E96A /* Info.plist */,
 				04C205BD2DF1281E00B6E96A /* main.m */,
-				04C205B42DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld */,
 			);
-			path = "Gabe's-Fridge";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C205BE2DF1281E00B6E96A /* main.m in Sources */,
-				04C205B02DF1281A00B6E96A /* ViewController.m in Sources */,
+				04C205B02DF1281A00B6E96A /* GroceriesListViewController.m in Sources */,
 				04C205AA2DF1281A00B6E96A /* AppDelegate.m in Sources */,
 				04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */,
+				04C205CF2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m in Sources */,
+				04C205D02DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m in Sources */,
 				04C205B62DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3X5Z84XW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gabe's-Fridge/Info.plist";
+				INFOPLIST_FILE = "Gabe's-Fridge/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,7 +391,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3X5Z84XW5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gabe's-Fridge/Info.plist";
+				INFOPLIST_FILE = "Gabe's-Fridge/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -5,13 +5,13 @@
 //  Created by sofia on 04.06.2025.
 //
 
-#import "ViewController.h"
+#import "GroceriesListViewController.h"
 
-@interface ViewController ()
+@interface GroceriesListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GroceriesListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
