@@ -53,10 +53,6 @@
 		04C2059C2DF1281900B6E96A = {
 			isa = PBXGroup;
 			children = (
-				04C205CB2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.h */,
-				04C205CC2DF12C2100B6E96A /* GroceryItem+CoreDataClass.h */,
-				04C205CD2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m */,
-				04C205CE2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m */,
 				04C205A72DF1281A00B6E96A /* Gabe's-Fridge */,
 				04C205A62DF1281A00B6E96A /* Products */,
 			);
@@ -121,6 +117,10 @@
 		04C205C92DF1288D00B6E96A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04C205CB2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.h */,
+				04C205CC2DF12C2100B6E96A /* GroceryItem+CoreDataClass.h */,
+				04C205CD2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m */,
+				04C205CE2DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";

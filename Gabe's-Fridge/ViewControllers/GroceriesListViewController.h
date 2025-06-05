@@ -7,8 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GroceriesListViewController : UIViewController
+@interface GroceriesListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UITableView *groceriesTableView;
 
 @end
 
