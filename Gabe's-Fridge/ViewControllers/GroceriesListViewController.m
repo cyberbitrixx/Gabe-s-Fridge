@@ -5,11 +5,12 @@
 //  Created by sofia on 04.06.2025.
 //
 
+#import "AppDelegate.h"
 #import "GroceriesListViewController.h"
+#import "GroceryItem+CoreDataClass.h"
 
 @interface GroceriesListViewController ()
 
-// MARK: - Hard coded array as a data source, will be replaced by actual data later
 // private property
 @property (nonatomic, strong) NSArray *groceriesArray;
 
@@ -22,12 +23,27 @@
     self.groceriesTableView.delegate = self;
     self.groceriesTableView.dataSource = self;
     
-//    MARK: - Temporarily nitialize the hard coded array
-    self.groceriesArray = @[
-        @{@"name": @"Milk", @"expirationDate": @"2025-06-15"},
-        @{@"name": @"Cream cheese", @"expirationDate": @"2025-06-12"},
-        @{@"name": @"Eggs", @"expirationDate": @"2025-06-09"}
-    ];
+    
+//    MARK: Fetch actual NSArray of GroceryItem objects
+    NSFetchRequest *fetchRequest = [GroceryItem fetchRequest];
+    NSError *error = nil;
+    
+//    Get the CoreData context (very important)
+    NSManagedObjectContext *context = ((AppDelegate *)UIApplication.sharedApplication.delegate).persistentContainer.viewContext;
+    
+//    Execute the fetch
+    NSArray<GroceryItem *> *results = [context executeFetchRequest:fetchRequest error:&error];
+
+//    Error handling while fetching
+    if(error) {
+        NSLog(@"Error fetching GroceryItems: %@", error.localizedDescription);
+        self.groceriesArray = @[];
+    } else {
+        self.groceriesArray = results;
+        NSLog(@"Successfully fetched %lu grocery items from Core Data.", (unsigned long)self.groceriesArray.count);
+    }
+    
+    [self.groceriesTableView reloadData];
 }
 
 // MARK: - How many rows in section we need?
@@ -39,17 +55,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *groceryCell = [tableView dequeueReusableCellWithIdentifier: @"groceryCell"];
     
-    NSDictionary *item = self.groceriesArray[indexPath.row];
+    GroceryItem *item = self.groceriesArray[indexPath.row];
     
-    NSString *name = item[@"name"];
-    NSString *expirationDate = item[@"expirationDate"];
-    
-    groceryCell.textLabel.text = name;
+//    Grocery name
+    groceryCell.textLabel.text = item.name;
     groceryCell.textLabel.font = [UIFont boldSystemFontOfSize: 15];
+     
+//    Expiration date formatting
+    NSDate *expirationDate = item.expirationDate;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateStyle = NSDateFormatterShortStyle;
+    formatter.timeStyle = NSDateFormatterNoStyle;
     
-    groceryCell.detailTextLabel.text = [NSString stringWithFormat:@"Expires on %@", expirationDate];
+//    Ecpiration date label
+    NSString *dateString = [formatter stringFromDate:expirationDate];
+    groceryCell.detailTextLabel.text = [NSString stringWithFormat: @"Expires on %@", dateString];
     groceryCell.detailTextLabel.font = [UIFont systemFontOfSize: 13];
-    groceryCell.detailTextLabel.textColor = [UIColor redColor];
+    
+//    MARK: - Add expiration date color logic after AddNewItem screen is implemented
+//    Expiration date color
+    
+    
     
     
     return groceryCell;

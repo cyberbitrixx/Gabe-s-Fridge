@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+// MARK: for myself: this file (and implementation file) are for my editing. I'm supposed to edit them if I want any custom logic
+
 @interface GroceryItem : NSManagedObject
+
+// MARK: - Custom data logic for tracking grocery item status
+- (BOOL)isExpired;
+- (BOOL)isExpiringSoon;
+- (UIColor *)expirationColor;
 
 @end
 
