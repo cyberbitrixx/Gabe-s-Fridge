@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GroceriesListViewController.h"
 #import "GroceryItem+CoreDataClass.h"
+#import "AddNewItemViewController.h"
 
 @interface GroceriesListViewController ()
 
@@ -58,8 +59,23 @@
 
 // MARK: Add button tapped (show AddNewItem view in modal)
 - (void)addButtonTapped:(id)sender {
+//    Debug log
     NSLog(@"Add item button tapped.");
-//        Present AddNewItem view in modal code goes here
+    
+//    Instantiate main storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+//    Add new item view controller container (addVC variable)
+    AddNewItemViewController *addVC = [storyboard instantiateViewControllerWithIdentifier:@"AddNewItemViewController"];
+    
+//    Embed add new item vc in navigation controller
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: addVC];
+    
+//    Set modal presentaion style when button is tapped
+    nav.modalPresentationStyle = UIModalPresentationPageSheet;
+    nav.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    [self presentViewController: nav animated: YES completion: nil];
+    
 };
 
 // MARK: - How many rows in section we need?

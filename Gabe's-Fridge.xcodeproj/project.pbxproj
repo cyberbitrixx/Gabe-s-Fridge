@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047903172E2889EA00F09AFF /* AddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047903162E2889EA00F09AFF /* AddNewItemViewController.m */; };
 		04C205AA2DF1281A00B6E96A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205A92DF1281A00B6E96A /* AppDelegate.m */; };
 		04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AC2DF1281A00B6E96A /* SceneDelegate.m */; };
 		04C205B02DF1281A00B6E96A /* GroceriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047903152E2889EA00F09AFF /* AddNewItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewItemViewController.h; sourceTree = "<group>"; };
+		047903162E2889EA00F09AFF /* AddNewItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewItemViewController.m; sourceTree = "<group>"; };
 		04C205A52DF1281A00B6E96A /* Gabe's-Fridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gabe's-Fridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C205A82DF1281A00B6E96A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C205A92DF1281A00B6E96A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 			children = (
 				04C205AE2DF1281A00B6E96A /* GroceriesListViewController.h */,
 				04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */,
+				047903152E2889EA00F09AFF /* AddNewItemViewController.h */,
+				047903162E2889EA00F09AFF /* AddNewItemViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */,
 				04C205CF2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m in Sources */,
 				04C205D02DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m in Sources */,
+				047903172E2889EA00F09AFF /* AddNewItemViewController.m in Sources */,
 				04C205B62DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
