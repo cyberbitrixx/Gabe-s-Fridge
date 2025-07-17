@@ -5,6 +5,7 @@
 //  Created by sofia on 04.06.2025.
 //
 
+#import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "GroceriesListViewController.h"
 #import "GroceryItem+CoreDataClass.h"
@@ -22,6 +23,15 @@
     [super viewDidLoad];
     self.groceriesTableView.delegate = self;
     self.groceriesTableView.dataSource = self;
+
+    
+    //    MARK: Add New Item (+) button
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
+                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self
+                                  action:@selector(addButtonTapped:)];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    
     
     
 //    MARK: Fetch actual NSArray of GroceryItem objects
@@ -45,6 +55,12 @@
     
     [self.groceriesTableView reloadData];
 }
+
+// MARK: Add button tapped (show AddNewItem view in modal)
+- (void)addButtonTapped:(id)sender {
+    NSLog(@"Add item button tapped.");
+//        Present AddNewItem view in modal code goes here
+};
 
 // MARK: - How many rows in section we need?
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -10,6 +10,7 @@
 @interface GroceriesListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *groceriesTableView;
+- (void)addButtonTapped:(id)sender;
 
 @end
 
