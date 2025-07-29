@@ -9,8 +9,7 @@
 #import "GroceryItem+CoreDataClass.h"
 #import <UIKit/UIKit.h>
 
-// MARK: to myself: this file (and header files) are for me to implement custom logic and be edited
-
+/// This file is for implementing custom data model logic
 @implementation GroceryItem
 
 // MARK: - Custom logic implementation
@@ -20,9 +19,10 @@
 
 - (BOOL)isExpiringSoon {
     NSTimeInterval daysLeft = [self.expirationDate timeIntervalSinceNow];
-    return daysLeft > 0 && daysLeft <= (3 * 24 * 60 * 60); // 3 days
+    return daysLeft > 0 && daysLeft <= (3 * 24 * 60 * 60); // Item is expiring in 3 days
 }
 
+/// Color-code items expiration dates
 - (UIColor *)expirationColor {
     if ([self isExpired]) {
         return [UIColor redColor];

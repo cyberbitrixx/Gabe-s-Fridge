@@ -12,8 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// MARK: for myself: this file (and implementation file) are for my editing. I'm supposed to edit them if I want any custom logic
-
+/// Header for defining what custom logic will be in this data model
 @interface GroceryItem : NSManagedObject
 
 // MARK: - Custom data logic for tracking grocery item status

@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 import SwiftUI
 
+/// Bridging class to present SwiftUI view (AddNewItemView) and connect to Obj-C ViewController
 @objc class SwiftUIViewPresenter: NSObject {
+    
+    /// Create a VC for AddNewItem View
+    /// - Returns: hosting controller
     @objc static func createAddNewItemViewController() -> UIViewController {
         let view = AddNewItemView()
         let hostingController = UIHostingController(rootView: view)

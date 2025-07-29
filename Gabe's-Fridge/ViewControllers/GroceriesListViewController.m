@@ -11,9 +11,10 @@
 #import "GroceryItem+CoreDataClass.h"
 #import "Gabe_s_Fridge-Swift.h"
 
+/// View Controller for presenting the list of grocery items user has and adding new items to the list
 @interface GroceriesListViewController ()
 
-// private property
+//  MARK: - Private properties
 @property (nonatomic, strong) NSArray *groceriesArray;
 
 @end
@@ -26,7 +27,7 @@
     self.groceriesTableView.dataSource = self;
 
     
-    //    MARK: Add New Item (+) button
+    //    MARK: - Add New Item (+) button
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc]
                                   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self
                                   action:@selector(addButtonTapped:)];
@@ -57,17 +58,14 @@
     [self.groceriesTableView reloadData];
 }
 
-// MARK: Add button tapped (show AddNewItem view in modal)
+// MARK: - "Add" button tapped (show AddNewItem view in modal)
 - (void)addButtonTapped:(id)sender {
-//    Debug log
-    NSLog(@"Add item button tapped.");
-//    Create and present SwiftUI modal view here
     UIViewController *addNewItemModal = [SwiftUIViewPresenter createAddNewItemViewController];
     [self presentViewController:addNewItemModal animated:YES completion:nil];
     
 };
 
-// MARK: - How many rows in section we need?
+// MARK: - How many rows in section we need in TableView?
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _groceriesArray.count;
 }
@@ -93,17 +91,19 @@
     groceryCell.detailTextLabel.text = [NSString stringWithFormat: @"Expires on %@", dateString];
     groceryCell.detailTextLabel.font = [UIFont systemFontOfSize: 13];
     
-//    MARK: - Add expiration date color logic after AddNewItem screen is implemented
+//    TODO: - Add expiration date color logic after AddNewItem screen is implemented
 //    Expiration date color
-    
-    
-    
     
     return groceryCell;
 }
 
+
+/// Row was selected - trigger an action (open a view for individual grocery item from the list)
+/// - Parameters:
+///   - tableView: table view with grocery items
+///   - indexPath: what cell/row was selected
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    Add logic for popping up a modal screen with item details once the item is clicked
+//    TODO: - Add logic for popping up a modal screen with item details once the item is clicked
 }
 
 
