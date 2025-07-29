@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "GroceriesListViewController.h"
 #import "GroceryItem+CoreDataClass.h"
-#import "AddNewItemViewController.h"
+#import "Gabe_s_Fridge-Swift.h"
 
 @interface GroceriesListViewController ()
 
@@ -61,20 +61,9 @@
 - (void)addButtonTapped:(id)sender {
 //    Debug log
     NSLog(@"Add item button tapped.");
-    
-//    Instantiate main storyboard
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-//    Add new item view controller container (addVC variable)
-    AddNewItemViewController *addVC = [storyboard instantiateViewControllerWithIdentifier:@"AddNewItemViewController"];
-    
-//    Embed add new item vc in navigation controller
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController: addVC];
-    
-//    Set modal presentaion style when button is tapped
-    nav.modalPresentationStyle = UIModalPresentationPageSheet;
-    nav.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    
-    [self presentViewController: nav animated: YES completion: nil];
+//    Create and present SwiftUI modal view here
+    UIViewController *addNewItemModal = [SwiftUIViewPresenter createAddNewItemViewController];
+    [self presentViewController:addNewItemModal animated:YES completion:nil];
     
 };
 

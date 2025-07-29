@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047903172E2889EA00F09AFF /* AddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047903162E2889EA00F09AFF /* AddNewItemViewController.m */; };
+		0423BB442E382CD500634074 /* SwiftUIViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423BB432E382CD500634074 /* SwiftUIViewPresenter.swift */; };
+		048C8E302E2C978900F6831B /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C8E2F2E2C978900F6831B /* AddNewItemView.swift */; };
 		04C205AA2DF1281A00B6E96A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205A92DF1281A00B6E96A /* AppDelegate.m */; };
 		04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AC2DF1281A00B6E96A /* SceneDelegate.m */; };
 		04C205B02DF1281A00B6E96A /* GroceriesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */; };
@@ -21,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		047903152E2889EA00F09AFF /* AddNewItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNewItemViewController.h; sourceTree = "<group>"; };
-		047903162E2889EA00F09AFF /* AddNewItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNewItemViewController.m; sourceTree = "<group>"; };
+		0423BB432E382CD500634074 /* SwiftUIViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewPresenter.swift; sourceTree = "<group>"; };
+		048C8E2E2E2C978900F6831B /* Gabe's-Fridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gabe's-Fridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		048C8E2F2E2C978900F6831B /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
 		04C205A52DF1281A00B6E96A /* Gabe's-Fridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gabe's-Fridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C205A82DF1281A00B6E96A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C205A92DF1281A00B6E96A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0423BB422E382C9600634074 /* Bridges */ = {
+			isa = PBXGroup;
+			children = (
+				0423BB432E382CD500634074 /* SwiftUIViewPresenter.swift */,
+			);
+			path = Bridges;
+			sourceTree = "<group>";
+		};
 		04C2059C2DF1281900B6E96A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		04C205A72DF1281A00B6E96A /* Gabe's-Fridge */ = {
 			isa = PBXGroup;
 			children = (
+				0423BB422E382C9600634074 /* Bridges */,
 				04C205C92DF1288D00B6E96A /* Models */,
 				04C205C82DF1288700B6E96A /* Views */,
 				04C205C72DF1286C00B6E96A /* ViewControllers */,
@@ -106,8 +117,6 @@
 			children = (
 				04C205AE2DF1281A00B6E96A /* GroceriesListViewController.h */,
 				04C205AF2DF1281A00B6E96A /* GroceriesListViewController.m */,
-				047903152E2889EA00F09AFF /* AddNewItemViewController.h */,
-				047903162E2889EA00F09AFF /* AddNewItemViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +124,8 @@
 		04C205C82DF1288700B6E96A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				048C8E2F2E2C978900F6831B /* AddNewItemView.swift */,
+				048C8E2E2E2C978900F6831B /* Gabe's-Fridge-Bridging-Header.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +184,7 @@
 				TargetAttributes = {
 					04C205A42DF1281A00B6E96A = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -215,10 +227,11 @@
 				04C205BE2DF1281E00B6E96A /* main.m in Sources */,
 				04C205B02DF1281A00B6E96A /* GroceriesListViewController.m in Sources */,
 				04C205AA2DF1281A00B6E96A /* AppDelegate.m in Sources */,
+				0423BB442E382CD500634074 /* SwiftUIViewPresenter.swift in Sources */,
 				04C205AD2DF1281A00B6E96A /* SceneDelegate.m in Sources */,
+				048C8E302E2C978900F6831B /* AddNewItemView.swift in Sources */,
 				04C205CF2DF12C2100B6E96A /* GroceryItem+CoreDataClass.m in Sources */,
 				04C205D02DF12C2100B6E96A /* GroceryItem+CoreDataProperties.m in Sources */,
-				047903172E2889EA00F09AFF /* AddNewItemViewController.m in Sources */,
 				04C205B62DF1281A00B6E96A /* Gabe_s_Fridge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3X5Z84XW5;
@@ -384,6 +398,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cyberbitrixx.Gabe-s-Fridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gabe's-Fridge/Views/Gabe's-Fridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -393,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B3X5Z84XW5;
@@ -411,6 +429,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cyberbitrixx.Gabe-s-Fridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gabe's-Fridge/Views/Gabe's-Fridge-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
