@@ -36,7 +36,7 @@
     
     
     
-//    MARK: Fetch actual NSArray of GroceryItem objects
+//    MARK: - Fetch actual NSArray of GroceryItem objects
     NSFetchRequest *fetchRequest = [GroceryItem fetchRequest];
     NSError *error = nil;
     
